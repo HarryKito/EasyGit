@@ -2,13 +2,15 @@
 import git
 from git import Repo
 
-import sys
 import os
 import time
+import sys
 
-import graphics
+from graphics import mainPage
+from PyQt5.QtWidgets import QApplication
+
 if __name__ =="__main__":
-    Repo.clone_from("https://github.com/HarryKito/ky-algorithm-class-b.git", "TEST" , recursive=True )
-    app = graphics.MainPage(sys.argv)
-    ex = graphics.run_mainPage()
+    # Repo.clone_from("https://github.com/HarryKito/ky-algorithm-class-b.git", "TEST" , recursive=True )
+    app = QApplication(sys.argv)
+    ex = mainPage.MainPage()
     sys.exit(app.exec_())
